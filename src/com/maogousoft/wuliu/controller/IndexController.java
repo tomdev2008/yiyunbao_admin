@@ -148,7 +148,7 @@ public class IndexController extends BaseController{
 		List<Record > list = Db.find(sql , getUserId());
 		for(Record privilege : list){
 			privilege.set("isLeaf", privilege.getInt("is_leaf") == 1);
-			privilege.set("expanded", true);
+			privilege.set("expanded", false);
 		}
 		String json  = JSONUtils.toJSONStringUsingRecord(list, "id|pid|privilege_name|privilege_code|url|order_num|privilege_type|isLeaf|status|expanded|checked");
 		renderText(json);

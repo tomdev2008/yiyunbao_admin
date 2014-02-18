@@ -21,7 +21,7 @@ public class Run {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		JFinal.start("WebRoot", 81, "/admin",5);
+		JFinal.start("WebRoot", 8888, "/admin",5);
 	}
 
 }
